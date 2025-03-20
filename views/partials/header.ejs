@@ -1,0 +1,17 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <% if (!loggedIn) { %>
+                <li><a href="/api/auth/login">Log In</a></li>
+                <li><a href="/api/auth/signup">Sign Up</a></li>
+            <% } else { %>
+                <li><a href="/api/auth/protected">Private</a></li>
+                <li><a href="/api/auth/logout">Log Out</a></li>
+            <% } %>
+            <!-- <li><a href="/api/auth/login">Log In</a></li>
+            <li><a href="/api/auth/signup">Sign Up</a></li>
+            <li><a href="/api/auth/protected">Private</a></li> -->
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private</title>
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <% if (typeof msg !== 'undefined' && typeof user !== 'undefined') { %>
+            <h1><%= msg %></h1>
+            <h1>User Info <br>Email: <%= user.email %></h1>
+        <% } else { %>
+            <h1>Please log in first..</h1> <!-- Default message -->
+        <% } %>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

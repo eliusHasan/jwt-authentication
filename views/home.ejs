@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <% if (typeof user !== 'undefined') { %>
+            <h1>Welcome, <%= user.email %>!</h1>
+        <% } %>
+        <% if (typeof msg !== 'undefined') { %>
+            <h1><%= msg %></h1> <!-- Display the message if it exists -->
+        <% } else { %>
+            <h1>Welcome to the home page! <br> Please log in to visit private page</h1> <!-- Default message -->
+        <% } %>
+        
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
